@@ -1,19 +1,13 @@
 #!/usr/bin/python3
-"""
-Contains the class MyInt
-"""
+"""MyInt class module"""
 
 
 class MyInt(int):
-    """rebel version of an integer, perfect for opposite day!"""
-    def __new__(cls, *args, **kwargs):
-        """create a new instance of the class"""
-        return super(MyInt, cls).__new__(cls, *args, **kwargs)
-
+    """A MyInt class"""
     def __eq__(self, other):
-        """what was != is now =="""
-        return int(self) != other
+        """Overides and inverts == operator"""
+        return int(self) != int(other)
 
     def __ne__(self, other):
-        """what was == is now !="""
-        return int(self) == other
+        """Overides and inverts != operator"""
+        return int(self) == int(other)
